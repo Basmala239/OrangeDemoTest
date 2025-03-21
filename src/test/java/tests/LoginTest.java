@@ -10,6 +10,7 @@ public class LoginTest extends TestBase {
     LeavePage leave;
     RecruitmentPage recruitmentPage;
     CandidatePage candidatePage;
+    myInfoPage infoPage;
     @BeforeMethod
     public void init(){
         loginPage = new LoginPage(driver);
@@ -17,6 +18,7 @@ public class LoginTest extends TestBase {
         leave = new LeavePage(driver);
         recruitmentPage = new RecruitmentPage(driver);
         candidatePage = new CandidatePage(driver);
+        infoPage= new myInfoPage(driver);
     }
     @Test
     public void loginWithValidUserNameAndPassword() throws InterruptedException {
@@ -29,8 +31,8 @@ public class LoginTest extends TestBase {
         Thread.sleep(5000);
         Assert.assertEquals(dashboardPage.ActualResultAssert(),dashboardPage.title);
         Thread.sleep(5000);
-        dashboardPage.clickRecruitmentButton();
 
+//        dashboardPage.clickRecruitmentButton();
 //        dashboardPage.clickLeaveIconButton();
 //        Thread.sleep(5000);
 //        leave.clickAssignButton();
@@ -38,17 +40,20 @@ public class LoginTest extends TestBase {
 //        Assert.assertEquals(leave.ActualResultForInvalid(),leave.invalid);
 //        Thread.sleep(10000);
 //        dashboardPage.clickRecruitmentButton();
-        recruitmentPage.clickAddButton();
-        Thread.sleep(5000);
-        candidatePage.fillFullName("Basmala");
-        Thread.sleep(5000);
-        candidatePage.fillMiddleName("Abuzied");
-        Thread.sleep(5000);
-        candidatePage.fillLastName("Ahmed");
-        Thread.sleep(5000);
-        candidatePage.clickSaveButton();
-        Thread.sleep(5000);
 
+//        recruitmentPage.clickAddButton();
+//        Thread.sleep(5000);
+//        candidatePage.fillFullName("Basmala");
+//        Thread.sleep(5000);
+//        candidatePage.fillMiddleName("Abuzied");
+//        Thread.sleep(5000);
+//        candidatePage.fillLastName("Ahmed");
+//        Thread.sleep(5000);
+//        candidatePage.clickSaveButton();
+//        Thread.sleep(5000);
+
+        dashboardPage.clickMyInfoIconButton();
+        Thread.sleep(5000);
 
 
 
